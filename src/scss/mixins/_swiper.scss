@@ -1,0 +1,81 @@
+@import "../../../node_modules/swiper/swiper.scss";
+
+@mixin pagination-settings($bullet-size: 30px, $bullet-color: #ccc, $bullet-active: #000, $bullet-margin: 25px) {
+  display: flex;
+  position: absolute;
+  z-index: +1;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  .swiper-pagination-bullet {
+    width: $bullet-size;
+    height: $bullet-size;
+    border-radius: 50%;
+    background-color: $bullet-color;
+
+    &:not(:last-child) {
+      margin-right: $bullet-margin;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $bullet-active;
+  }
+}
+
+@mixin swiper-buttons(
+  $button-size: 50px,
+  $button-width: 5px,
+  $button-color: #ccc,
+  $button-active: #000,
+  $button-position: center
+) {
+  width: $button-size;
+  height: $button-size;
+  border-right: $button-width solid $button-color;
+  border-bottom: $button-width solid $button-color;
+
+  position: absolute;
+  z-index: +1;
+
+  @if $button-position == top {
+    top: 0;
+    &--next {
+      right: 0;
+      transform: translateX(-50%) translateY(50%) rotate(-45deg);
+    }
+    &--prev {
+      left: 0;
+      transform: translateX(50%) translateY(50%) rotate(135deg);
+    }
+  } @else if $button-position == center {
+    top: 50%;
+    &--next {
+      right: 0;
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+    &--prev {
+      left: 0;
+      transform: translateX(50%) translateY(-50%) rotate(135deg);
+    }
+  } @else if $button-position == bottom {
+    top: 100%;
+    &--next {
+      right: 0;
+      transform: translateX(-50%) translateY(-150%) rotate(-45deg);
+    }
+    &--prev {
+      left: 0;
+      transform: translateX(50%) translateY(-150%) rotate(135deg);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: $button-active;
+  }
+}

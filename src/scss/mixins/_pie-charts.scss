@@ -1,0 +1,36 @@
+@mixin pie-chart(
+  $percent: 35,
+  $size: 150px,
+  $line-width: 10px,
+  $line-color: orange,
+  $line-color_rgba: yellow,
+  $bg-inside-pie: white
+) {
+  width: $size;
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  background: $line-color_rgba;
+  border-radius: 50%;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: $size - $line-width;
+    height: $size - $line-width;
+    border-radius: 50%;
+    background-color: $bg-inside-pie;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient($line-color calc($percent * 1%), #0000 0);
+  }
+}
