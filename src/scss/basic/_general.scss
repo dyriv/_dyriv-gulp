@@ -1,15 +1,17 @@
 /* General settings */
 .--page {
+  // <html>
   height: 100%;
   -webkit-text-size-adjust: 100%;
   &__body {
+    // <body>
     margin: 0;
     min-width: 320px;
     min-height: 100%;
 
-    font-family: $font-family, sans-serif;
-    font-size: $font-size;
-    color: $font-color;
+    font-family: $_ff, sans-serif;
+    font-size: $_fz;
+    color: $_fc;
   }
 }
 
@@ -28,7 +30,7 @@
 
 .--container {
   position: relative;
-  max-width: calc(($container-width + 30) * 1px);
+  max-width: calc(($_width + 30) * 1px);
   padding: 0 15px;
   margin: 0 auto;
 }

@@ -1,3 +1,12 @@
+// ! add position relative to parent div
+
+// ! add styles for element width .ibg class
+// position: absolute;
+// width: img width;
+// height: img height;
+// top: 0;
+// left: 0;
+
 @mixin ibg {
   .ibg {
     background-position: center;
