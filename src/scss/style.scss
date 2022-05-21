@@ -1,17 +1,17 @@
 // % Reset default style settings
-@import "basic/_reset";
+@import "basic/reset";
 
 // % Variables
-@import "basic/_vars";
+@import "basic/vars";
 
 // % Mixins
-@import "basic/_mixins";
+@import "basic/mixins";
 
 // % Link downloaded fonts
-// @import "basic/_fonts";
+// @import "basic/fonts";
 
 // % General settings
-@import "basic/_general";
+@import "basic/general";
 
 // % Styles from components
-@import "basic/_link-styles";
+@import "basic/link-styles";
