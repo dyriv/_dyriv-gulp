@@ -1,6 +1,6 @@
 @import "../../../node_modules/swiper/swiper.scss";
 
-@mixin pagination-settings($bullet-size: 30px, $bullet-color: #ccc, $bullet-active: #000, $bullet-margin: 25px) {
+@mixin _swiper-pagination($bullet-size: 30px, $bullet-color: #ccc, $bullet-active: #000, $bullet-margin: 25px) {
   display: flex;
   position: absolute;
   z-index: +1;
@@ -27,7 +27,7 @@
   }
 }
 
-@mixin swiper-buttons(
+@mixin _swiper-buttons(
   $button-size: 50px,
   $button-width: 5px,
   $button-color: #ccc,
