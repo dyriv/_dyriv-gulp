@@ -1,18 +1,18 @@
 export function burgerMenu() {
-  const burger = document?.querySelector('[data-burger]');
-  const menu = document?.querySelector('[data-menu]');
+  const burger_btn = document?.querySelector('[burger-btn]');
+  const nav_menu = document?.querySelector('[nav-menu]');
 
-  burger?.addEventListener('click', (e) => {
-    burger?.classList.toggle('burger--active');
-    menu?.classList.toggle('menu--active');
+  burger_btn?.addEventListener('click', (e) => {
+    burger_btn?.classList.toggle('burger--active');
+    nav_menu?.classList.toggle('menu--active');
 
-    if (menu?.classList.contains('menu--active')) {
-      burger?.setAttribute('aria-expanded', 'true');
-      burger?.setAttribute('aria-label', 'Закрыть меню');
+    if (nav_menu?.classList.contains('menu--active')) {
+      burger_btn?.setAttribute('aria-expanded', 'true');
+      burger_btn?.setAttribute('aria-label', 'Close menu');
       disableScroll();
     } else {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'Открыть меню');
+      burger_btn?.setAttribute('aria-expanded', 'false');
+      burger_btn?.setAttribute('aria-label', 'Open menu');
       enableScroll();
     }
   });

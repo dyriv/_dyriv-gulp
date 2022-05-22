@@ -1,11 +1,12 @@
 import $ from "jquery";
 
 export function likeDislike() {
-  const like = document.getElementById('like');
-  const dislike = document.getElementById('dislike');
 
-  var like_count = document.getElementById('like-counter');
-  var dislike_count = document.getElementById('dislike-counter');
+  const like = document.querySelector('[like]');
+  const dislike = document.querySelector('[dislike]');
+
+  let like_count = like.querySelector('[count]');
+  let dislike_count = dislike.querySelector('[count]');
 
   like.addEventListener('click', (e) => {
     if (!like.classList.contains("liked")) {
@@ -14,6 +15,7 @@ export function likeDislike() {
 
       if (dislike.classList.contains("disliked")) {
         dislike.classList.remove("disliked");
+        $(dislike_count).html(parseInt(dislike_count.innerHTML) - 1);
       };
     } else {
       like.classList.remove("liked");
@@ -28,6 +30,7 @@ export function likeDislike() {
 
       if (like.classList.contains("liked")) {
         like.classList.remove("liked");
+        $(like_count).html(parseInt(like_count.innerHTML) - 1);
       };
     } else {
       dislike.classList.remove("disliked");

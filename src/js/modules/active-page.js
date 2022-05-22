@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 export function activePage() {
-  $('.nav .nav__link').filter(function () {
+  $("[nav-link]").filter(function () {
     return $(this).attr('href').toLowerCase() === window.location.pathname.toLowerCase();
-  }).addClass('active');
+  }).addClass('--active-page');
 }
