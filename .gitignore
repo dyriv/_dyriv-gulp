@@ -2,5 +2,3 @@ node_modules
 app
 package-lock.json
 *.zip
-_ignore-me.html
-_ignore-me.css
