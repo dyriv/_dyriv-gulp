@@ -11,9 +11,9 @@ export function isWebp() {
   // add class  "_webp" or "_no-webp" for html
   testWebP(function (support) {
     if (support == true) {
-      document.querySelector('body').classList.add('webp');
+      document.querySelector('body').classList.add('_webp');
     } else {
-      document.querySelector('body').classList.add('no-webp');
+      document.querySelector('body').classList.add('_no-webp');
     }
   });
 }

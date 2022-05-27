@@ -18,3 +18,6 @@
 
 // import { likeDislike } from "./modules/like-dislike.js"; // Like / dislike
 // likeDislike();
+
+// import { checkIsMobile } from "./modules/pc-mobile.js"; // Add class _pc / _touch
+// checkIsMobile();
