@@ -1,0 +1,229 @@
+// ! IMPORTANT
+// add in .menu__nav-links._on attributes {position: fixed; top: 0; overflow-y: auto;}
+
+@mixin burger_v1($burger-width: 60px, $burger-height: 30px, $line-weight: 4px, $line-color: #000) {
+  .burger {
+    width: $burger-width;
+    height: $burger-height;
+    border: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+
+    button {
+      &:after,
+      &:before,
+      span {
+        width: 100%;
+        height: $line-weight;
+        border-radius: 100px;
+        position: absolute;
+        left: 0px;
+        background: $line-color;
+        transform: rotate(0deg);
+        transition: all 0.4s;
+      }
+
+      &:after,
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        top: 0px;
+        margin-top: 0px;
+      }
+
+      &:before {
+        bottom: 0px;
+        margin-bottom: 0px;
+      }
+
+      span {
+        top: 50%;
+        margin-top: calc($line-weight / (-2));
+      }
+    }
+    &._on button {
+      &:after {
+        transform: rotate(135deg) translate(calc(($burger-height * 30) / 100), calc(($burger-width * 15) / (-100)));
+      }
+
+      &:before {
+        transform: rotate(225deg);
+        bottom: 50%;
+        margin-bottom: calc($line-weight / (-2));
+      }
+
+      span {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
+// ! IMPORTANT
+// add in .menu__nav-links._on attributes {position: fixed; top: 0; overflow-y: auto;}
+
+@mixin burger_v2($burger-width: 60px, $burger-height: 30px, $line-weight: 4px, $line-color: #000) {
+  .burger {
+    width: $burger-width;
+    height: $burger-height;
+    border: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    button {
+      &:after,
+      &:before,
+      span {
+        width: 100%;
+        height: $line-weight;
+        border-radius: 100px;
+        position: absolute;
+        left: 0px;
+        background: $line-color;
+      }
+
+      &:after,
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        top: 0px;
+        margin-top: 0px;
+        transition: transform 0.2s, 0.2s all 0.4s;
+      }
+
+      &:before {
+        bottom: 0px;
+        margin-bottom: 0px;
+        transition: transform 0.2s, 0.2s all 0.4s;
+      }
+
+      span {
+        top: 50%;
+        margin-top: calc($line-weight / (-2));
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 3.9s ease;
+      }
+    }
+    &._on button {
+      &:after {
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: calc($line-weight / (-2));
+        transition: all 0.2s, 0.2s transform 0.4s;
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+        bottom: 50%;
+        margin-bottom: calc($line-weight / (-2));
+        transition: all 0.2s, 0.2s transform 0.4s;
+      }
+
+      span {
+        visibility: hidden;
+        transition: opacity 0.4s, visibility 0.4s;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// ! IMPORTANT
+// add in .menu__nav-links._on attributes {position: fixed; top: 0; overflow-y: auto;}
+
+@mixin burger_v3($burger-width: 60px, $burger-height: 30px, $line-weight: 4px, $line-color: #000) {
+  .burger {
+    width: $burger-width;
+    height: $burger-height;
+    border: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    button {
+      &:after,
+      &:before,
+      span {
+        width: 100%;
+        height: $line-weight;
+        border-radius: 100px;
+        position: absolute;
+        display: block;
+        background: $line-color;
+      }
+
+      &:after,
+      &:before {
+        content: "";
+        transition: 0.3s width 0.4s;
+      }
+
+      &:after {
+        top: 0px;
+        left: 0px;
+        margin-top: 0px;
+      }
+
+      &:before {
+        bottom: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+      }
+
+      span {
+        top: 50%;
+        margin-top: calc($line-weight / (-2));
+        transition: transform 0.3s;
+        &:before {
+          content: "";
+          background: $line-color;
+          width: 100%;
+          height: $line-weight;
+          border-radius: 100px;
+          position: absolute;
+          left: 0px;
+          transition: transform 0.3s;
+        }
+      }
+    }
+    &._on button {
+      &:after {
+        transition: all 0.2s;
+        width: 0%;
+        left: 0px;
+      }
+
+      &:before {
+        transition: all 0.2s;
+        width: 0%;
+        right: 0px;
+      }
+
+      span {
+        transform: rotate(45deg);
+        transition: 0.3s transform 0.4s;
+        &:before {
+          transform: rotate(-90deg);
+          transition: 0.3s transform 0.4s;
+        }
+      }
+    }
+  }
+}
+
+// ! IMPORTANT
+// add in .menu__nav-links._on attributes {position: fixed; top: 0; overflow-y: auto;}

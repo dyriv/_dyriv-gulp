@@ -11,8 +11,8 @@
 // moreLessArticle();
 
 // % Menu burger
-// import { menu_burger } from "./modules/burger-menu.js";
-// menu_burger();
+// import { menuBurger } from "./modules/menu-burger.js";
+// menuBurger();
 
 // % Check active page
 // import { activePage } from "./modules/active-page.js";
