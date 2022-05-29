@@ -1,23 +1,31 @@
-// import { isWebp } from "./modules/is-web.js"; // Add class "_webp" or "_no-webp"
+// % Add class "_webp" or "_no-webp"
+// import { isWebp } from "./modules/is-web.js";
 // isWebp();
 
-// import { iBg } from "./modules/image-bg.js"; // Image background`s function
+// % Image background`s function
+// import { iBg } from "./modules/image-bg.js";
 // iBg();
 
-// import { moreLessArticle } from "./modules/more-less_article.js"; // Show more/less
+// % Show more/less
+// import { moreLessArticle } from "./modules/more-less_article.js";
 // moreLessArticle();
 
-// import { burgerMenu } from "./modules/burger-menu.js"; // Menu burger
-// burgerMenu();
+// % Menu burger
+// import { menu_burger } from "./modules/burger-menu.js";
+// menu_burger();
 
-// import { activePage } from "./modules/active-page.js"; // Check active page
+// % Check active page
+// import { activePage } from "./modules/active-page.js";
 // activePage();
 
-// import { swiperSlider } from "./modules/swiper-slider.js"; // Swiper slider
+// % Swiper slider
+// import { swiperSlider } from "./modules/swiper-slider.js";
 // swiperSlider();
 
-// import { likeDislike } from "./modules/like-dislike.js"; // Like / dislike
+// % Like / dislike
+// import { likeDislike } from "./modules/like-dislike.js";
 // likeDislike();
 
-// import { checkIsMobile } from "./modules/pc-mobile.js"; // Add class _pc / _touch
+// % Add class "_pc" / "_touch"
+// import { checkIsMobile } from "./modules/pc-mobile.js";
 // checkIsMobile();
