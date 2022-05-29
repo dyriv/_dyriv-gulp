@@ -42,8 +42,8 @@ export const scss = () => {
         app.isBuild,
         webpcss(
           {
-            webpClass: ".webp",
-            noWebpClass: ".no-webp"
+            webpClass: "._webp",
+            noWebpClass: "._no-webp"
           }
         )
       )
