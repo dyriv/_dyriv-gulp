@@ -1,0 +1,9 @@
+Extra small (XS):	>= 320px
+Small	(SM):	>= 576px
+Medium	(MD):	>= 768px
+Large	(LG):	>= 992px
+Extra large	(XL):	>= 1200px
+Mega large	(XXL): >= 1400px
+
+if you need to use single breakpoint (example):
+@media (min-width: 768px) and (max-width: 991.98px)
