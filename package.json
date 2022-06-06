@@ -46,6 +46,7 @@
     "gulp-zip": "latest",
     "jquery": "^3.6.0",
     "sass": "latest",
+    "slick-carousel": "^1.8.1",
     "swiper": "^8.1.1",
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",
