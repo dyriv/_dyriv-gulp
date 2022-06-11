@@ -1,5 +1,6 @@
 node_modules
-app
+public
 package-lock.json
 *.zip
 desktop.ini
+readme.txt
