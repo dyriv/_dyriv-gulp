@@ -2,7 +2,7 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./app`;
+const buildFolder = `./public`;
 const srcFolder = `./src`;
 
 export const path = {
