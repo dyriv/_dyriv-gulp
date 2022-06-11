@@ -3,4 +3,4 @@ public
 package-lock.json
 *.zip
 desktop.ini
-readme.txt
+.gitignore
