@@ -1,14 +1,18 @@
 import $ from "jquery";
 
+const menu_container = $("[menu-cont]");
 const burger_btn = $("[burger-btn]");
-const menu = $("[burger-menu]");
+const burger_menu = $("[burger-menu]");
+const log_reg = $("[log-reg]");
 
 let max_px = 768;
 
 export function menuBurger() {
   burger_btn.on('click', () => {
+    menu_container.toggleClass("_active");
     burger_btn.toggleClass('_on');
-    menu.toggleClass('_on');
+    burger_menu.toggleClass('_on');
+    log_reg.toggleClass('_on');
   });
   hideShow();
   $(window).resize(function () {
@@ -16,29 +20,36 @@ export function menuBurger() {
   });
 }
 
-// add or remove class _hide from burger_btn and menu
-const ShowHideBurger = {
+const ShowHideElements = {
   show: function () {
+    menu_container.removeClass("_active");
+
     burger_btn.removeClass("_hide");
-    menu.addClass("_hide");
+    burger_btn.removeClass("_on");
+
+    burger_menu.addClass("_hide");
+    burger_menu.removeClass("_on");
+
+    log_reg.addClass("_hide");
+    log_reg.removeClass("_on");
   },
   hide: function () {
     burger_btn.addClass("_hide");
-    menu.removeClass("_hide");
+
+    burger_menu.removeClass("_hide");
+    burger_menu.addClass("_on");
+
+    log_reg.removeClass("_hide");
+    log_reg.addClass("_on");
   },
 }
 
 // change default menu to burger menu if screen width <= max_px
 function hideShow() {
   if (window.screen.width <= max_px) {
-    ShowHideBurger.show();
+    ShowHideElements.show();
   } else {
-    ShowHideBurger.hide();
-    if (menu.hasClass("_on")) {
-      menu.removeClass("_on");
-    } else if (burger_btn.hasClass("_on")) {
-      burger_btn.removeClass("_on");
-    }
+    ShowHideElements.hide();
   }
 }
 

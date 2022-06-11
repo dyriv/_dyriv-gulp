@@ -1,11 +1,26 @@
-// !! add position relative to parent div
+// % use snippet --> ibg
 
-// !! add styles for element width .ibg class
-// position: absolute;
-// width: img width;
-// height: img height;
-// top: 0;
-// left: 0;
+// <div class="$1__bg-wrap">
+//   <div class="$1__bg-container .ibg">
+//     <img src="$2" alt="$3">
+//   </div>
+// </div>
+
+@mixin for_bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin for_bg-container {
+  flex: 1 0 100%;
+  position: relative;
+}
 
 @mixin ibg {
   .ibg {

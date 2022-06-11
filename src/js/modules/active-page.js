@@ -3,5 +3,5 @@ import $ from "jquery";
 export function activePage() {
   $("[nav-link]").filter(function () {
     return $(this).attr('href').toLowerCase() === window.location.pathname.toLowerCase();
-  }).addClass('--active-page');
+  }).addClass('_active-page');
 }

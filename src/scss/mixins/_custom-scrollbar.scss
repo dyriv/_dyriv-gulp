@@ -1,4 +1,4 @@
-@mixin scrollbar($_sb-bg: #fff, $_sb-thumb: #ccc, $_sb-width: 40px) {
+@mixin scrollbar($_sb-bg: #fff, $_sb-thumb: #ccc, $_sb-width: 40px, $_sb-radius: 0px) {
   &::-webkit-scrollbar {
     width: $_sb-width;
     &-track {
@@ -6,6 +6,7 @@
     }
     &-thumb {
       background-color: $_sb-thumb;
+      border-radius: $_sb-radius;
     }
   }
 }

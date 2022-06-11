@@ -6,10 +6,6 @@
 // import { iBg } from "./modules/image-bg.js";
 // iBg();
 
-// % Show more/less
-// import { moreLessArticle } from "./modules/more-less_article.js";
-// moreLessArticle();
-
 // % Menu burger
 // import { menuBurger } from "./modules/menu-burger.js";
 // menuBurger();
