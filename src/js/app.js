@@ -25,3 +25,7 @@
 // % Add class "_pc" / "_touch"
 // import { checkIsMobile } from "./modules/pc-mobile.js";
 // checkIsMobile();
+
+// % One page navigation (smooth scrolling)
+// import { onePageNavigation } from "./modules/one-page-nav.js";
+// onePageNavigation();

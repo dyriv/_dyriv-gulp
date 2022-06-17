@@ -1,9 +1,10 @@
 import $ from "jquery";
 
-const menu_container = $("[menu-cont]");
-const burger_btn = $("[burger-btn]");
-const burger_menu = $("[burger-menu]");
-const log_reg = $("[log-reg]");
+let menu_container = $("[menu-cont]");
+let burger_btn = $("[burger-btn]");
+let burger_menu = $("[burger-menu]");
+let log_reg = $("[log-reg]");
+let profile = $("[profile]");
 
 let max_px = 768;
 
@@ -13,6 +14,17 @@ export function menuBurger() {
     burger_btn.toggleClass('_on');
     burger_menu.toggleClass('_on');
     log_reg.toggleClass('_on');
+	
+	// position: fixed; to body
+    let body_attr = $("body").attr("style");
+    
+    if (typeof body_attr !== 'undefined' && body_attr !== false) {
+      console.log("attribute removed");
+      $("body").removeAttr("style");
+    } else {
+      console.log("attribute added");
+      $("body").attr("style", "position: fixed");
+    }
   });
   hideShow();
   $(window).resize(function () {
@@ -21,7 +33,8 @@ export function menuBurger() {
 }
 
 const ShowHideElements = {
-  show: function () {
+  // hide all elements and show burger button
+  hideAll: function () {
     menu_container.removeClass("_active");
 
     burger_btn.removeClass("_hide");
@@ -32,8 +45,14 @@ const ShowHideElements = {
 
     log_reg.addClass("_hide");
     log_reg.removeClass("_on");
+	
+	profile.addClass("_hide");
+    profile.removeClass("_on");
+
+    $("body").removeAttr("style"); // remove position: fixed; for body if screen size changed
   },
-  hide: function () {
+  // show all elements and hide burger button
+  showAll: function () {
     burger_btn.addClass("_hide");
 
     burger_menu.removeClass("_hide");
@@ -41,15 +60,18 @@ const ShowHideElements = {
 
     log_reg.removeClass("_hide");
     log_reg.addClass("_on");
+	
+	profile.removeClass("_hide");
+    profile.addClass("_on");
   },
 }
 
 // change default menu to burger menu if screen width <= max_px
 function hideShow() {
   if (window.screen.width <= max_px) {
-    ShowHideElements.show();
+    ShowHideElements.hideAll();
   } else {
-    ShowHideElements.hide();
+    ShowHideElements.showAll();
   }
 }
 

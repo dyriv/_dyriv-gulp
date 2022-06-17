@@ -1,6 +1,19 @@
-@mixin scrollbar($_sb-bg: #fff, $_sb-thumb: #ccc, $_sb-width: 40px, $_sb-radius: 0px) {
+@mixin scrollbarY($_sb-bg: #fff, $_sb-thumb: #ccc, $_sb-width: 40px, $_sb-radius: 0px) {
   &::-webkit-scrollbar {
     width: $_sb-width;
+    &-track {
+      background-color: $_sb-bg;
+    }
+    &-thumb {
+      background-color: $_sb-thumb;
+      border-radius: $_sb-radius;
+    }
+  }
+}
+
+@mixin scrollbarX($_sb-bg: #fff, $_sb-thumb: #ccc, $_sb-height: 40px, $_sb-radius: 0px) {
+  &::-webkit-scrollbar {
+    height: $_sb-height;
     &-track {
       background-color: $_sb-bg;
     }
