@@ -14,15 +14,13 @@ export function menuBurger() {
     burger_btn.toggleClass('_on');
     burger_menu.toggleClass('_on');
     log_reg.toggleClass('_on');
-	
-	// position: fixed; to body
+
+    // position: fixed; to body
     let body_attr = $("body").attr("style");
-    
+
     if (typeof body_attr !== 'undefined' && body_attr !== false) {
-      console.log("attribute removed");
       $("body").removeAttr("style");
     } else {
-      console.log("attribute added");
       $("body").attr("style", "position: fixed");
     }
   });
@@ -37,36 +35,38 @@ const ShowHideElements = {
   hideAll: function () {
     menu_container.removeClass("_active");
 
+    // show burger button (close menu if open)
     burger_btn.removeClass("_hide");
     burger_btn.removeClass("_on");
 
+    // hide all elements when burger button is shown
     burger_menu.addClass("_hide");
-    burger_menu.removeClass("_on");
-
     log_reg.addClass("_hide");
+    profile.addClass("_hide");
+
+    burger_menu.removeClass("_on");
     log_reg.removeClass("_on");
-	
-	profile.addClass("_hide");
     profile.removeClass("_on");
 
     $("body").removeAttr("style"); // remove position: fixed; for body if screen size changed
   },
   // show all elements and hide burger button
   showAll: function () {
+    // hide burger button
     burger_btn.addClass("_hide");
 
+    // show all elements when burger button is hidden
     burger_menu.removeClass("_hide");
-    burger_menu.addClass("_on");
-
     log_reg.removeClass("_hide");
+    profile.removeClass("_hide");
+
+    burger_menu.addClass("_on");
     log_reg.addClass("_on");
-	
-	profile.removeClass("_hide");
     profile.addClass("_on");
   },
 }
 
-// change default menu to burger menu if screen width <= max_px
+// change default menu to menu-burger if screen width <= max_px
 function hideShow() {
   if (window.screen.width <= max_px) {
     ShowHideElements.hideAll();
@@ -76,7 +76,7 @@ function hideShow() {
 }
 
 
-// hide toolbar after scrolldown
+// hide toolbar after scrolldown and show to scrollup
 function hideAfterScroll() {
   let prev_pos = $(window).scrollTop();
   let menu_height = $("[menu-tools]").outerHeight();

@@ -2,6 +2,10 @@
 // import { isWebp } from "./modules/is-web.js";
 // isWebp();
 
+// % Add class "_pc" / "_touch"
+// import { checkIsMobile } from "./modules/pc-mobile.js";
+// checkIsMobile();
+
 // % Image background`s function
 // import { iBg } from "./modules/image-bg.js";
 // iBg();
@@ -14,6 +18,10 @@
 // import { activePage } from "./modules/active-page.js";
 // activePage();
 
+// % One page navigation (smooth scrolling)
+// import { onePageNavigation } from "./modules/one-page-nav.js";
+// onePageNavigation();
+
 // % Swiper slider
 // import { swiperSlider } from "./modules/swiper-slider.js";
 // swiperSlider();
@@ -22,10 +30,4 @@
 // import { likeDislike } from "./modules/like-dislike.js";
 // likeDislike();
 
-// % Add class "_pc" / "_touch"
-// import { checkIsMobile } from "./modules/pc-mobile.js";
-// checkIsMobile();
 
-// % One page navigation (smooth scrolling)
-// import { onePageNavigation } from "./modules/one-page-nav.js";
-// onePageNavigation();
