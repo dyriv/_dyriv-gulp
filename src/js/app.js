@@ -1,10 +1,10 @@
 // % Add class "_webp" or "_no-webp"
-// import { isWebp } from "./modules/is-web.js";
-// isWebp();
+import { isWebp } from "./modules/is-web.js";
+isWebp();
 
 // % Add class "_pc" / "_touch"
-// import { checkIsMobile } from "./modules/pc-mobile.js";
-// checkIsMobile();
+import { checkIsMobile } from "./modules/pc-mobile.js";
+checkIsMobile();
 
 // % Image background`s function
 // import { iBg } from "./modules/image-bg.js";
